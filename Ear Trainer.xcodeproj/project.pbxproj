@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4360E4230254D10027A4BA /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4360E3230254D10027A4BA /* Quiz.swift */; };
+		AF4360E6230255BB0027A4BA /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4360E5230255BB0027A4BA /* Sound.swift */; };
+		AF4360E8230264040027A4BA /* SoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4360E7230264040027A4BA /* SoundStore.swift */; };
+		AF4360EA230266C10027A4BA /* QuizStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4360E9230266C10027A4BA /* QuizStore.swift */; };
+		AF4E68D122F79DCC006E8094 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E68D022F79DCC006E8094 /* Storyboarded.swift */; };
 		AFBA4A8822F65D3F00B6DDA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA4A8722F65D3F00B6DDA7 /* AppDelegate.swift */; };
 		AFBA4A8A22F65D3F00B6DDA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA4A8922F65D3F00B6DDA7 /* ViewController.swift */; };
 		AFBA4A8D22F65D3F00B6DDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA4A8B22F65D3F00B6DDA7 /* Main.storyboard */; };
 		AFBA4A8F22F65D4100B6DDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBA4A8E22F65D4100B6DDA7 /* Assets.xcassets */; };
 		AFBA4A9222F65D4100B6DDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA4A9022F65D4100B6DDA7 /* LaunchScreen.storyboard */; };
+		AFBA4A9C22F65F2200B6DDA7 /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA4A9B22F65F2200B6DDA7 /* HomeFlowCoordinator.swift */; };
+		AFBA4A9F22F65F7400B6DDA7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA4A9E22F65F7400B6DDA7 /* Home.storyboard */; };
+		AFBA4AA122F65F9B00B6DDA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA4AA022F65F9B00B6DDA7 /* HomeViewController.swift */; };
+		AFBA4AA322F6655B00B6DDA7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA4AA222F6655B00B6DDA7 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF4360E3230254D10027A4BA /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		AF4360E5230255BB0027A4BA /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		AF4360E7230264040027A4BA /* SoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundStore.swift; sourceTree = "<group>"; };
+		AF4360E9230266C10027A4BA /* QuizStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStore.swift; sourceTree = "<group>"; };
+		AF4E68D022F79DCC006E8094 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		AFBA4A8422F65D3F00B6DDA7 /* Ear Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ear Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA4A8722F65D3F00B6DDA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFBA4A8922F65D3F00B6DDA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +36,10 @@
 		AFBA4A8E22F65D4100B6DDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBA4A9122F65D4100B6DDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFBA4A9322F65D4100B6DDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFBA4A9B22F65F2200B6DDA7 /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
+		AFBA4A9E22F65F7400B6DDA7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AFBA4AA022F65F9B00B6DDA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFBA4AA222F6655B00B6DDA7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF4360E22302545D0027A4BA /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF4360E3230254D10027A4BA /* Quiz.swift */,
+				AF4360E5230255BB0027A4BA /* Sound.swift */,
+				AF4360E7230264040027A4BA /* SoundStore.swift */,
+				AF4360E9230266C10027A4BA /* QuizStore.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		AFBA4A7B22F65D3F00B6DDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				AFBA4A8722F65D3F00B6DDA7 /* AppDelegate.swift */,
+				AF4E68D022F79DCC006E8094 /* Storyboarded.swift */,
+				AF4360E22302545D0027A4BA /* Data Model */,
+				AFBA4A9D22F65F5F00B6DDA7 /* Home */,
 				AFBA4A8922F65D3F00B6DDA7 /* ViewController.swift */,
 				AFBA4A8B22F65D3F00B6DDA7 /* Main.storyboard */,
 				AFBA4A8E22F65D4100B6DDA7 /* Assets.xcassets */,
@@ -62,6 +94,17 @@
 				AFBA4A9322F65D4100B6DDA7 /* Info.plist */,
 			);
 			path = "Ear Trainer";
+			sourceTree = "<group>";
+		};
+		AFBA4A9D22F65F5F00B6DDA7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AFBA4A9E22F65F7400B6DDA7 /* Home.storyboard */,
+				AFBA4A9B22F65F2200B6DDA7 /* HomeFlowCoordinator.swift */,
+				AFBA4AA022F65F9B00B6DDA7 /* HomeViewController.swift */,
+				AFBA4AA222F6655B00B6DDA7 /* HomeTableViewCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +168,7 @@
 				AFBA4A9222F65D4100B6DDA7 /* LaunchScreen.storyboard in Resources */,
 				AFBA4A8F22F65D4100B6DDA7 /* Assets.xcassets in Resources */,
 				AFBA4A8D22F65D3F00B6DDA7 /* Main.storyboard in Resources */,
+				AFBA4A9F22F65F7400B6DDA7 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +179,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBA4AA322F6655B00B6DDA7 /* HomeTableViewCell.swift in Sources */,
+				AF4360E8230264040027A4BA /* SoundStore.swift in Sources */,
+				AF4360EA230266C10027A4BA /* QuizStore.swift in Sources */,
+				AFBA4AA122F65F9B00B6DDA7 /* HomeViewController.swift in Sources */,
+				AF4360E4230254D10027A4BA /* Quiz.swift in Sources */,
+				AFBA4A9C22F65F2200B6DDA7 /* HomeFlowCoordinator.swift in Sources */,
 				AFBA4A8A22F65D3F00B6DDA7 /* ViewController.swift in Sources */,
 				AFBA4A8822F65D3F00B6DDA7 /* AppDelegate.swift in Sources */,
+				AF4E68D122F79DCC006E8094 /* Storyboarded.swift in Sources */,
+				AF4360E6230255BB0027A4BA /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

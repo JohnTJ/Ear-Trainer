@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="rWo-Ru-bic">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="n8b-xj-McE" customClass="HomeViewController" customModule="Ear_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D4F-AA-LZl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsSelection="NO" rowHeight="145" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="HH1-qa-SKx">
+                                <rect key="frame" x="15" y="44" width="345" height="768"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="768" id="2Sg-Py-XFz"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" red="0.68934406729999997" green="0.68934406729999997" blue="0.68934406729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizCell" rowHeight="140" id="jzN-oh-5iw" customClass="HomeTableViewCell" customModule="Ear_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="345" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jzN-oh-5iw" id="mG5-Tw-Cz2">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3u-Bh-KTH">
+                                                    <rect key="frame" x="15" y="55" width="315" height="48"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-n4-g86">
+                                                    <rect key="frame" x="15" y="12.000000000000002" width="315" height="27.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Score: --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-gV-lX9">
+                                                    <rect key="frame" x="205" y="108" width="125" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="2MY-Pm-h0X"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B1m-n4-g86" firstAttribute="leading" secondItem="mG5-Tw-Cz2" secondAttribute="leadingMargin" id="2P4-5T-WR8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="B1m-n4-g86" secondAttribute="trailing" id="5bL-ta-zGh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UUs-gV-lX9" secondAttribute="bottom" constant="3" id="6NA-ox-sUr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="M3u-Bh-KTH" secondAttribute="trailing" id="UBT-d1-Y2B"/>
+                                                <constraint firstItem="UUs-gV-lX9" firstAttribute="top" secondItem="M3u-Bh-KTH" secondAttribute="bottom" constant="5" id="Upl-Hf-Fzh"/>
+                                                <constraint firstItem="M3u-Bh-KTH" firstAttribute="top" secondItem="B1m-n4-g86" secondAttribute="bottom" constant="15.33" id="buC-h2-K1L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UUs-gV-lX9" secondAttribute="trailing" id="f4y-3q-H7E"/>
+                                                <constraint firstItem="M3u-Bh-KTH" firstAttribute="leading" secondItem="mG5-Tw-Cz2" secondAttribute="leadingMargin" id="g9V-Aq-Axl"/>
+                                                <constraint firstItem="B1m-n4-g86" firstAttribute="top" secondItem="mG5-Tw-Cz2" secondAttribute="top" constant="12" id="rov-Oo-wsU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="M3u-Bh-KTH" id="f5k-ns-aU9"/>
+                                            <outlet property="titleLabel" destination="B1m-n4-g86" id="xPD-Me-iMS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Emq-7w-jDz" firstAttribute="trailing" secondItem="HH1-qa-SKx" secondAttribute="trailing" constant="15" id="3Gs-6M-pIb"/>
+                            <constraint firstItem="HH1-qa-SKx" firstAttribute="top" secondItem="Emq-7w-jDz" secondAttribute="top" id="CqN-L5-9PU"/>
+                            <constraint firstItem="HH1-qa-SKx" firstAttribute="leading" secondItem="Emq-7w-jDz" secondAttribute="leading" constant="15" id="ePM-LK-gHp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Emq-7w-jDz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HH1-qa-SKx" id="IVx-UM-EAE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bed-DF-kba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-496.80000000000001" y="-83.497536945812811"/>
+        </scene>
+    </scenes>
+</document>
