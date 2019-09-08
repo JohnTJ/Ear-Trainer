@@ -31,11 +31,20 @@ class HomeFlowCoordinator {
 }
 
 extension HomeFlowCoordinator: HomeViewControllerDelegate {
-    func signOut() {
+    func signOut(viewController: UIViewController) {
         print("Singing Out")
     }
     
-    func presentScores() {
+    func presentScores(viewController: UIViewController) {
         print("Presenting Scores")
+    }
+    
+    func presentQuizSettings(quiz: Quiz, viewController: UIViewController) {
+        print("Presenting Quiz Settings")
+        
+        let quizSettingsViewController = QuizSettingsViewController.instantiate(storyboard: "Home")
+        quizSettingsViewController.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(quizSettingsViewController, animated: true)
+        
     }
 }

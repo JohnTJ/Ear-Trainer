@@ -9,9 +9,11 @@
 import UIKit
 
 protocol HomeViewControllerDelegate: class {
-    func signOut()
+    func signOut(viewController: UIViewController)
     
-    func presentScores()
+    func presentScores(viewController: UIViewController)
+    
+    func presentQuizSettings(quiz: Quiz, viewController: UIViewController)
 }
 
 class HomeViewController: UIViewController, Storyboarded {
@@ -43,18 +45,18 @@ class HomeViewController: UIViewController, Storyboarded {
     
     @objc
     func myScoresTapped() {
-        delegate.presentScores()
+        delegate.presentScores(viewController: self)
     }
     
     @objc
     private func signOut() {
-        delegate.signOut()
+        delegate.signOut(viewController: self)
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return quizStore.quizes.count
+        return quizStore.quizzes.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,13 +68,17 @@ extension HomeViewController: UITableViewDataSource {
             fatalError("Could not find cell with identifier 'Cell'")
         }
         
-        cell.configure(title: quizStore.quizes[indexPath.section].title, description: quizStore.quizes[indexPath.section].description)
-        
+        cell.configure(title: quizStore.quizzes[indexPath.section].title, description: quizStore.quizzes[indexPath.section].description)
+        cell.selectionStyle = .none
         return cell
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate.presentQuizSettings(quiz: quizStore.quizzes[indexPath.section], viewController: self)
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if (cell.responds(to: #selector(getter: UIView.tintColor))){
             if tableView == self.tableView {
