@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF232B482328398700BCEE4C /* QuizFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */; };
 		AF3ED1A623252D4B0087B62B /* dDimSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19423252D4A0087B62B /* dDimSep.mp3 */; };
 		AF3ED1A723252D4B0087B62B /* gAugSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19523252D4A0087B62B /* gAugSep.mp3 */; };
 		AF3ED1A823252D4B0087B62B /* cDimSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19623252D4A0087B62B /* cDimSep.mp3 */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFlowCoordinator.swift; sourceTree = "<group>"; };
 		AF3ED19423252D4A0087B62B /* dDimSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dDimSep.mp3; sourceTree = "<group>"; };
 		AF3ED19523252D4A0087B62B /* gAugSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gAugSep.mp3; sourceTree = "<group>"; };
 		AF3ED19623252D4A0087B62B /* cDimSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cDimSep.mp3; sourceTree = "<group>"; };
@@ -190,10 +192,11 @@
 			isa = PBXGroup;
 			children = (
 				AFBA4A9E22F65F7400B6DDA7 /* Home.storyboard */,
+				AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */,
 				AFBA4A9B22F65F2200B6DDA7 /* HomeFlowCoordinator.swift */,
 				AFBA4AA022F65F9B00B6DDA7 /* HomeViewController.swift */,
-				AFBA4AA222F6655B00B6DDA7 /* HomeTableViewCell.swift */,
 				AF3ED1C4232533E20087B62B /* QuizSettingsViewController.swift */,
+				AFBA4AA222F6655B00B6DDA7 /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFBA4AA322F6655B00B6DDA7 /* HomeTableViewCell.swift in Sources */,
+				AF232B482328398700BCEE4C /* QuizFlowCoordinator.swift in Sources */,
 				AF4360E8230264040027A4BA /* SoundStore.swift in Sources */,
 				AF4360EA230266C10027A4BA /* QuizStore.swift in Sources */,
 				AF3ED1C5232533E20087B62B /* QuizSettingsViewController.swift in Sources */,

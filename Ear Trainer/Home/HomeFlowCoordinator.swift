@@ -43,8 +43,14 @@ extension HomeFlowCoordinator: HomeViewControllerDelegate {
         print("Presenting Quiz Settings")
         
         let quizSettingsViewController = QuizSettingsViewController.instantiate(storyboard: "Home")
+        quizSettingsViewController.configure(quiz: quiz, delegate: self)
         quizSettingsViewController.modalPresentationStyle = .fullScreen
         navigationController.pushViewController(quizSettingsViewController, animated: true)
-        
+    }
+}
+
+extension HomeFlowCoordinator: QuizSettingsViewControllerDelegate {
+    func beginQuiz(quiz: Quiz, viewController: QuizSettingsViewController) {
+        print("Starting \(quiz.title)")
     }
 }
