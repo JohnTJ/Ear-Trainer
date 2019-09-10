@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AF232B482328398700BCEE4C /* QuizFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */; };
+		AF232B4A23283E0600BCEE4C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF232B4923283E0600BCEE4C /* QuizViewController.swift */; };
+		AF232B4D23283E4600BCEE4C /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF232B4C23283E4600BCEE4C /* Quiz.storyboard */; };
 		AF3ED1A623252D4B0087B62B /* dDimSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19423252D4A0087B62B /* dDimSep.mp3 */; };
 		AF3ED1A723252D4B0087B62B /* gAugSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19523252D4A0087B62B /* gAugSep.mp3 */; };
 		AF3ED1A823252D4B0087B62B /* cDimSep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED19623252D4A0087B62B /* cDimSep.mp3 */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFlowCoordinator.swift; sourceTree = "<group>"; };
+		AF232B4923283E0600BCEE4C /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		AF232B4C23283E4600BCEE4C /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		AF3ED19423252D4A0087B62B /* dDimSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dDimSep.mp3; sourceTree = "<group>"; };
 		AF3ED19523252D4A0087B62B /* gAugSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gAugSep.mp3; sourceTree = "<group>"; };
 		AF3ED19623252D4A0087B62B /* cDimSep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cDimSep.mp3; sourceTree = "<group>"; };
@@ -105,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF232B4B23283E2100BCEE4C /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				AF232B4C23283E4600BCEE4C /* Quiz.storyboard */,
+				AF232B4923283E0600BCEE4C /* QuizViewController.swift */,
+				AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
 		AF3ED19223252CB50087B62B /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +193,7 @@
 				AF3ED19223252CB50087B62B /* Media */,
 				AF4360E22302545D0027A4BA /* Data Model */,
 				AFBA4A9D22F65F5F00B6DDA7 /* Home */,
+				AF232B4B23283E2100BCEE4C /* Quiz */,
 				AFBA4A8922F65D3F00B6DDA7 /* ViewController.swift */,
 				AFBA4A8B22F65D3F00B6DDA7 /* Main.storyboard */,
 				AFBA4A8E22F65D4100B6DDA7 /* Assets.xcassets */,
@@ -192,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				AFBA4A9E22F65F7400B6DDA7 /* Home.storyboard */,
-				AF232B472328398700BCEE4C /* QuizFlowCoordinator.swift */,
 				AFBA4A9B22F65F2200B6DDA7 /* HomeFlowCoordinator.swift */,
 				AFBA4AA022F65F9B00B6DDA7 /* HomeViewController.swift */,
 				AF3ED1C4232533E20087B62B /* QuizSettingsViewController.swift */,
@@ -265,6 +279,7 @@
 				AF3ED1B523252D4B0087B62B /* fmSep.mp3 in Resources */,
 				AF3ED1B323252D4B0087B62B /* eAug.mp3 in Resources */,
 				AF3ED1AE23252D4B0087B62B /* DmSep.mp3 in Resources */,
+				AF232B4D23283E4600BCEE4C /* Quiz.storyboard in Resources */,
 				AF3ED1A923252D4B0087B62B /* gMajSep.mp3 in Resources */,
 				AF3ED1AA23252D4B0087B62B /* cMajSep.mp3 in Resources */,
 				AF3ED1BB23252FA40087B62B /* Fm.mp3 in Resources */,
@@ -305,6 +320,7 @@
 				AFBA4AA122F65F9B00B6DDA7 /* HomeViewController.swift in Sources */,
 				AF4360E4230254D10027A4BA /* Quiz.swift in Sources */,
 				AFBA4A9C22F65F2200B6DDA7 /* HomeFlowCoordinator.swift in Sources */,
+				AF232B4A23283E0600BCEE4C /* QuizViewController.swift in Sources */,
 				AFBA4A8A22F65D3F00B6DDA7 /* ViewController.swift in Sources */,
 				AFBA4A8822F65D3F00B6DDA7 /* AppDelegate.swift in Sources */,
 				AF4E68D122F79DCC006E8094 /* Storyboarded.swift in Sources */,

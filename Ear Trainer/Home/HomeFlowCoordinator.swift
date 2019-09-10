@@ -18,6 +18,8 @@ class HomeFlowCoordinator {
     
     private var quizStore: QuizStore
     
+    private var quizCoordinator: QuizFlowCoordinator?
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.quizStore = QuizStore()
@@ -52,5 +54,8 @@ extension HomeFlowCoordinator: HomeViewControllerDelegate {
 extension HomeFlowCoordinator: QuizSettingsViewControllerDelegate {
     func beginQuiz(quiz: Quiz, viewController: QuizSettingsViewController) {
         print("Starting \(quiz.title)")
+        
+        quizCoordinator = QuizFlowCoordinator(quiz: quiz, navigationController: navigationController)
+        quizCoordinator?.start()
     }
 }
