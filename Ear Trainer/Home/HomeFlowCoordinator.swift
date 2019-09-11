@@ -34,15 +34,12 @@ class HomeFlowCoordinator {
 
 extension HomeFlowCoordinator: HomeViewControllerDelegate {
     func signOut(viewController: UIViewController) {
-        print("Singing Out")
     }
     
     func presentScores(viewController: UIViewController) {
-        print("Presenting Scores")
     }
     
     func presentQuizSettings(quiz: Quiz, viewController: UIViewController) {
-        print("Presenting Quiz Settings")
         
         let quizSettingsViewController = QuizSettingsViewController.instantiate(storyboard: "Home")
         quizSettingsViewController.configure(quiz: quiz, delegate: self)
@@ -52,10 +49,9 @@ extension HomeFlowCoordinator: HomeViewControllerDelegate {
 }
 
 extension HomeFlowCoordinator: QuizSettingsViewControllerDelegate {
-    func beginQuiz(quiz: Quiz, viewController: QuizSettingsViewController) {
-        print("Starting \(quiz.title)")
+    func beginQuiz(media: [Sound], numberOfQuestions: Int, viewController: QuizSettingsViewController) {
         
-        quizCoordinator = QuizFlowCoordinator(quiz: quiz, navigationController: navigationController)
+        quizCoordinator = QuizFlowCoordinator(media: media, numberOfQuestions: numberOfQuestions, navigationController: navigationController)
         quizCoordinator?.start()
     }
 }

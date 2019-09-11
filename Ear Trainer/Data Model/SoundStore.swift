@@ -10,6 +10,7 @@ import Foundation
 
 class SoundStore {
     
+    // Chords
     let cMaj = Chord(chordType: "Major", name: "Cmaj")
     let cMajSep = Chord(chordType: "Major", name: "cMajSep")
     let gMaj = Chord(chordType: "Major", name: "Gmaj")
@@ -35,11 +36,44 @@ class SoundStore {
     let gAug = Chord(chordType: "Augmented", name: "gAug")
     let gAugSep = Chord(chordType: "Augmented", name: "gAugSep")
     
+    // Keys
+    let cKey = Key(named: "C")
+    let dKey = Key(named: "D")
+    let bKey = Key(named: "B")
+    let fKey = Key(named: "F")
+    
+    // Major Chord Progressions
+    let majIIVIIV = ChordProgression(named: "I-IV-ii-V")
+    let majIiiiIVV = ChordProgression(named: "I-iii-IV-V")
+    let majIIVIV = ChordProgression(named: "I-IV-I-V")
+    let majIviIVV = ChordProgression(named: "I-vi-IV-V")
+    // Minor Chord Progressions
+    let miivi = ChordProgression(named: "i-iv-i")
+    let miivvi = ChordProgression(named: "i-iv-v-i")
+    let miivv = ChordProgression(named: "i-iv-v")
+    let miivi2 = ChordProgression(named: "ii-v-i")
+    
+    // Intervals
+    let majorThird = Interval(intervalType: "Major 3rd", name: "majorThird")
+    let majorSecond = Interval(intervalType: "Major 2nd", name: "majSecond")
+    let minorThird = Interval(intervalType: "Minor 3rd", name: "minorThird")
+    let perfectFourth = Interval(intervalType: "Perfect 4th", name: "perfectFourth")
+    
+    
+    
     private(set) var majors: [Sound]
     private(set) var minors: [Sound]
     private(set) var dims: [Sound]
     private(set) var augs: [Sound]
     private(set) var allChords: [Sound]
+    
+    private(set) var allKeys: [Sound]
+    
+    private(set) var majorProgressions: [Sound]
+    private(set) var minorProgressions: [Sound]
+    private(set) var allProgressions: [Sound]
+    
+    private(set) var allIntervals: [Sound]
     
     init() {
         self.majors = [cMaj, gMaj, eMaj]
@@ -47,5 +81,10 @@ class SoundStore {
         self.dims = [cDim, dDim, fDim]
         self.augs = [cAug, eAug, gAug]
         self.allChords = [cMaj, gMaj, eMaj, am, dm, fm, cDim, dDim, fDim, cAug, eAug, gAug]
+        self.allKeys = [cKey, dKey, bKey, fKey]
+        self.majorProgressions = [majIIVIIV, majIiiiIVV, majIIVIV, majIviIVV]
+        self.minorProgressions = [miivi, miivvi, miivv, miivi2]
+        self.allProgressions = [majIIVIIV, majIiiiIVV, majIIVIV, majIviIVV, miivi, miivvi, miivv, miivi2]
+        self.allIntervals = [majorThird, majorSecond, minorThird, perfectFourth]
     }
 }

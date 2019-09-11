@@ -11,9 +11,9 @@ import Foundation
 class Quiz {
     var title: String
     var description: String
-    var media: [Sound]
+    var media: [[Sound]]
     
-    init(title: String, description: String, media: [Sound]) {
+    init(title: String, description: String, media: [[Sound]]) {
         self.title = title
         self.description = description
         self.media = media

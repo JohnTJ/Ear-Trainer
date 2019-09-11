@@ -14,18 +14,21 @@ class QuizFlowCoordinator {
         return navigationController
     }
     
+    private var media: [Sound]!
+    
     private var navigationController: UINavigationController!
     
-    private var quiz: Quiz!
+    private var numberOfQuestions = 0
     
-    init(quiz: Quiz, navigationController: UINavigationController) {
+    init(media: [Sound], numberOfQuestions: Int, navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.quiz = quiz
+        self.numberOfQuestions = numberOfQuestions
+        self.media = media
     }
     
     func start() {
         let quizViewController = QuizViewController.instantiate(storyboard: "Quiz")
-        quizViewController.configure(quiz: quiz, delegate: self)
+        quizViewController.configure(media: media, numberOfQuestions: numberOfQuestions, delegate: self)
         navigationController.pushViewController(quizViewController, animated: true)
     }
 }

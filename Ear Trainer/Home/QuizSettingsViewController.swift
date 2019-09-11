@@ -9,24 +9,26 @@
 import UIKit
 
 protocol QuizSettingsViewControllerDelegate {
-    func beginQuiz(quiz: Quiz, viewController: QuizSettingsViewController)
+    func beginQuiz(media: [Sound], numberOfQuestions: Int, viewController: QuizSettingsViewController)
 }
 
 class QuizSettingsViewController: UIViewController, Storyboarded {
     
     private var delegate: QuizSettingsViewControllerDelegate!
     private var quiz: Quiz?
+    private var media: [Sound]!
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var numberOfQuestionsSegmenetedControl: UISegmentedControl!
     
+    @IBOutlet weak var keyTypeLabel: UILabel!
+    @IBOutlet weak var keyTypeSegmentedControl: UISegmentedControl!
+    
+    
     @IBAction func beginQuizButton(_ sender: Any) {
-        guard let quiz = quiz else {
-            fatalError("Could not find quiz")
-        }
-        delegate.beginQuiz(quiz: quiz, viewController: self)
+        delegate.beginQuiz(media: media, numberOfQuestions: numberOfQuestions, viewController: self)
     }
     
     @IBAction func numberOfQuestionsChanged(_ sender: Any) {
@@ -45,8 +47,25 @@ class QuizSettingsViewController: UIViewController, Storyboarded {
             break
         }
     }
+
+    @IBAction func keyTypeChanged(_ sender: Any) {
+        guard let quiz = quiz else {
+            fatalError("Could not find quiz")
+        }
     
-    private var numberOfQuestions: Int = 0
+        switch keyTypeSegmentedControl.selectedSegmentIndex {
+        case 0:
+            media = quiz.media[1]
+        case 1:
+            media = quiz.media[2]
+        default:
+            break
+        }
+    }
+    
+    
+    
+    private var numberOfQuestions: Int = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +78,16 @@ class QuizSettingsViewController: UIViewController, Storyboarded {
     func configure(quiz: Quiz, delegate: QuizSettingsViewControllerDelegate) {
         self.delegate = delegate
         self.quiz = quiz
+        self.media = quiz.media[0]
     }
     
     func establishUI() {
         guard let quiz = quiz else {
             fatalError("Could not find quiz")
+        }
+        if (quiz.title != "Chord Progressions") {
+            keyTypeLabel.isHidden = true
+            keyTypeSegmentedControl.isHidden = true
         }
         titleLabel.text = quiz.title
         descriptionLabel.text = quiz.description
@@ -72,16 +96,5 @@ class QuizSettingsViewController: UIViewController, Storyboarded {
         titleLabel.textColor = UIColor.red.withAlphaComponent(0.25)
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -125,6 +125,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-ye-WC0">
+                                        <rect key="frame" x="116.33333333333334" y="390.66666666666669" width="82.333333333333343" height="27.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="51V-Pk-J6g">
                                         <rect key="frame" x="30" y="338.66666666666669" width="255" height="43"/>
                                         <constraints>
@@ -141,14 +147,34 @@
                                             <action selector="numberOfQuestionsChanged:" destination="CsI-Xx-bYC" eventType="valueChanged" id="fT3-hi-PD8"/>
                                         </connections>
                                     </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qw7-Qv-MiD">
+                                        <rect key="frame" x="30" y="428.00000000000006" width="255" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="peO-An-wbR"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Major"/>
+                                            <segment title="Minor"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="keyTypeChanged:" destination="CsI-Xx-bYC" eventType="valueChanged" id="BjO-Ya-8hJ"/>
+                                            <action selector="numberOfQuestionsChanged:" destination="CsI-Xx-bYC" eventType="valueChanged" id="zxY-h2-QiJ"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.75407999753952026" blue="0.70652896165847778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="51V-Pk-J6g" firstAttribute="top" secondItem="Qbk-w0-aL3" secondAttribute="bottom" constant="10" id="B1F-I6-Ero"/>
+                                    <constraint firstItem="Qw7-Qv-MiD" firstAttribute="leading" secondItem="1yE-4S-7i0" secondAttribute="leading" constant="30" id="IN6-Pj-wkY"/>
+                                    <constraint firstItem="fOG-ye-WC0" firstAttribute="centerX" secondItem="1yE-4S-7i0" secondAttribute="centerX" id="K0q-HP-i5J"/>
                                     <constraint firstAttribute="trailing" secondItem="siG-Xf-297" secondAttribute="trailing" constant="30" id="KmX-NC-33S"/>
                                     <constraint firstItem="Qbk-w0-aL3" firstAttribute="centerX" secondItem="1yE-4S-7i0" secondAttribute="centerX" id="MIG-Fa-Cb2"/>
+                                    <constraint firstItem="Qw7-Qv-MiD" firstAttribute="top" secondItem="fOG-ye-WC0" secondAttribute="bottom" constant="10" id="N6Z-dE-EdA"/>
+                                    <constraint firstItem="fOG-ye-WC0" firstAttribute="top" secondItem="51V-Pk-J6g" secondAttribute="bottom" constant="10" id="Yzk-s4-1D9"/>
                                     <constraint firstItem="siG-Xf-297" firstAttribute="top" secondItem="1yE-4S-7i0" secondAttribute="top" constant="20" id="b5o-EH-x4c"/>
                                     <constraint firstAttribute="bottom" secondItem="ujL-cm-ixp" secondAttribute="bottom" constant="20" id="crr-Fg-KyG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qw7-Qv-MiD" secondAttribute="trailing" constant="30" id="hqa-hy-rtL"/>
                                     <constraint firstAttribute="trailing" secondItem="51V-Pk-J6g" secondAttribute="trailing" constant="30" id="oVk-RQ-dKQ"/>
                                     <constraint firstItem="51V-Pk-J6g" firstAttribute="leading" secondItem="1yE-4S-7i0" secondAttribute="leading" constant="30" id="ocS-69-JEF"/>
                                     <constraint firstItem="ujL-cm-ixp" firstAttribute="centerX" secondItem="1yE-4S-7i0" secondAttribute="centerX" id="pkS-JP-iRd"/>
@@ -183,6 +209,8 @@
                     <connections>
                         <outlet property="backgroundView" destination="1yE-4S-7i0" id="6Dz-HI-MDV"/>
                         <outlet property="descriptionLabel" destination="siG-Xf-297" id="tEQ-ah-cB5"/>
+                        <outlet property="keyTypeLabel" destination="fOG-ye-WC0" id="DZs-6a-YsD"/>
+                        <outlet property="keyTypeSegmentedControl" destination="Qw7-Qv-MiD" id="k2P-SH-Ga7"/>
                         <outlet property="numberOfQuestionsSegmenetedControl" destination="51V-Pk-J6g" id="E0q-Aw-2jB"/>
                         <outlet property="titleLabel" destination="8PJ-wh-ZBH" id="EBA-sf-k9R"/>
                     </connections>
